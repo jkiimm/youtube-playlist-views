@@ -31,13 +31,12 @@ function viewsTextToNum(text) {
   return R.pipe(numPart, ifEmptyToBeZero, toNumber)(text);
 }
 
-const vseeker = {
-  async gotcha(pid) {
-    const viewsText = await getViewsText(pid);
-    return viewsTextToNum(viewsText);
-  },
-  getViewsText,
-  viewsTextToNum,
-};
+async function views(pid) {
+  const viewsText = await getViewsText(pid);
+  return viewsTextToNum(viewsText);
+}
 
-export default vseeker;
+const playlist = { views, getViewsText, viewsTextToNum };
+
+export default playlist;
+export { views, getViewsText, viewsTextToNum };

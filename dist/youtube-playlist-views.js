@@ -3,6 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.viewsTextToNum = exports.getViewsText = exports.views = undefined;
 
 var _regenerator = require('babel-runtime/regenerator');
 
@@ -73,30 +74,30 @@ function viewsTextToNum(text) {
   return _ramda2.default.pipe(numPart, ifEmptyToBeZero, toNumber)(text);
 }
 
-var vseeker = {
-  gotcha: function gotcha(pid) {
-    var viewsText;
-    return _regenerator2.default.async(function gotcha$(_context2) {
-      while (1) {
-        switch (_context2.prev = _context2.next) {
-          case 0:
-            _context2.next = 2;
-            return _regenerator2.default.awrap(getViewsText(pid));
+function views(pid) {
+  var viewsText;
+  return _regenerator2.default.async(function views$(_context2) {
+    while (1) {
+      switch (_context2.prev = _context2.next) {
+        case 0:
+          _context2.next = 2;
+          return _regenerator2.default.awrap(getViewsText(pid));
 
-          case 2:
-            viewsText = _context2.sent;
-            return _context2.abrupt('return', viewsTextToNum(viewsText));
+        case 2:
+          viewsText = _context2.sent;
+          return _context2.abrupt('return', viewsTextToNum(viewsText));
 
-          case 4:
-          case 'end':
-            return _context2.stop();
-        }
+        case 4:
+        case 'end':
+          return _context2.stop();
       }
-    }, null, this);
-  },
+    }
+  }, null, this);
+}
 
-  getViewsText: getViewsText,
-  viewsTextToNum: viewsTextToNum
-};
+var playlist = { views: views, getViewsText: getViewsText, viewsTextToNum: viewsTextToNum };
 
-exports.default = vseeker;
+exports.default = playlist;
+exports.views = views;
+exports.getViewsText = getViewsText;
+exports.viewsTextToNum = viewsTextToNum;
