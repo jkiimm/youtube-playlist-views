@@ -2,8 +2,15 @@
 
 gotcha youtube playlist views
 
+[![Travis build status](http://img.shields.io/travis/jkiimm/youtube-playlist-views.svg?style=flat)](https://travis-ci.org/jkiimm/youtube-playlist-views)
+[![Code Climate](https://codeclimate.com/github/jkiimm/youtube-playlist-views/badges/gpa.svg)](https://codeclimate.com/github/jkiimm/youtube-playlist-views)
+[![Test Coverage](https://codeclimate.com/github/jkiimm/youtube-playlist-views/badges/coverage.svg)](https://codeclimate.com/github/jkiimm/youtube-playlist-views)
+[![Dependency Status](https://david-dm.org/jkiimm/youtube-playlist-views.svg)](https://david-dm.org/jkiimm/youtube-playlist-views)
+[![devDependency Status](https://david-dm.org/jkiimm/youtube-playlist-views/dev-status.svg)](https://david-dm.org/jkiimm/youtube-playlist-views#info=devDependencies)
+
 ## Installation
-```
+
+```sh
 $ npm install youtube-playlist-views --save
 ```
 
@@ -11,7 +18,7 @@ $ npm install youtube-playlist-views --save
 
 ### ES5
 
-```
+```javascript
 var playlist = require('youtube-playlist-views');
 
 playlist.views('PLAYLIST_ID').then(function (views) {
@@ -22,7 +29,7 @@ playlist.views('PLAYLIST_ID').then(function (views) {
 
 ### ES6
 
-```
+```javascript
 import playlist from 'youtube-playlist-views';
 
 playlist.views('PLAYLIST_ID').then((views) => {
@@ -30,9 +37,3 @@ playlist.views('PLAYLIST_ID').then((views) => {
   console.log(igotcha);
 });
 ```
-
-[![Travis build status](http://img.shields.io/travis/jkiimm/youtube-playlist-views.svg?style=flat)](https://travis-ci.org/jkiimm/youtube-playlist-views)
-[![Code Climate](https://codeclimate.com/github/jkiimm/youtube-playlist-views/badges/gpa.svg)](https://codeclimate.com/github/jkiimm/youtube-playlist-views)
-[![Test Coverage](https://codeclimate.com/github/jkiimm/youtube-playlist-views/badges/coverage.svg)](https://codeclimate.com/github/jkiimm/youtube-playlist-views)
-[![Dependency Status](https://david-dm.org/jkiimm/youtube-playlist-views.svg)](https://david-dm.org/jkiimm/youtube-playlist-views)
-[![devDependency Status](https://david-dm.org/jkiimm/youtube-playlist-views/dev-status.svg)](https://david-dm.org/jkiimm/youtube-playlist-views#info=devDependencies)
