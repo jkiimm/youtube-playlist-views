@@ -11,7 +11,7 @@ async function getViewsText(pid) {
     transform: (body) => cheerio.load(body)
   };
 
-  const findViewsText = R.find(R.pipe(R.match(/views/), R.complement(R.isEmpty)));
+  const findViewsText = R.find(R.pipe(R.match(/view/), R.complement(R.isEmpty)));
 
   const $ = await request(options);
   const selText = $(selector).map((key, val) => $(val).text()).get();

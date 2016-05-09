@@ -22,6 +22,9 @@ describe('playlist', () => {
       .query({ list: 'accessible_normal' })
       .replyWithFile(200, './test/fixtures/accessible_normal.html')
       .get('/playlist')
+      .query({ list: 'accessible_oneview' })
+      .replyWithFile(200, './test/fixtures/accessible_oneview.html')
+      .get('/playlist')
       .query({ list: 'accessible_noviews' })
       .replyWithFile(200, './test/fixtures/accessible_noviews.html')
       .get('/playlist')
@@ -38,6 +41,10 @@ describe('playlist', () => {
       })
       .then((text) => {
         text.should.match(/views/);
+        return f('accessible_oneview');
+      })
+      .then((text) => {
+        text.should.match(/view/);
         return f('notexist');
       })
       .catch((e) => {

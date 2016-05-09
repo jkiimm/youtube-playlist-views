@@ -38,7 +38,7 @@ function getViewsText(pid) {
               return _cheerio2.default.load(body);
             }
           };
-          findViewsText = _ramda2.default.find(_ramda2.default.pipe(_ramda2.default.match(/views/), _ramda2.default.complement(_ramda2.default.isEmpty)));
+          findViewsText = _ramda2.default.find(_ramda2.default.pipe(_ramda2.default.match(/view/), _ramda2.default.complement(_ramda2.default.isEmpty)));
           _context.next = 5;
           return _regenerator2.default.awrap((0, _requestPromise2.default)(options));
 
